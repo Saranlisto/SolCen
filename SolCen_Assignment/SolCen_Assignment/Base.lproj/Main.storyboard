@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iAd-NY-RBX">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SolCen_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter emailId" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o2E-Bp-ZrD">
+                                <rect key="frame" x="60" y="200" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="064-hl-TQe"/>
+                                    <constraint firstAttribute="height" constant="30" id="Rky-BU-RZr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="v9g-7q-MUm"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXS-Zf-Ijz">
+                                <rect key="frame" x="120" y="269" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TQ7-jO-uA3"/>
+                                    <constraint firstAttribute="width" constant="80" id="hOn-3V-jih"/>
+                                </constraints>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xSB-Wx-LJE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WXS-Zf-Ijz" firstAttribute="centerX" secondItem="o2E-Bp-ZrD" secondAttribute="centerX" id="KPy-3n-70A"/>
+                            <constraint firstItem="WXS-Zf-Ijz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TcD-oQ-iwO"/>
+                            <constraint firstItem="WXS-Zf-Ijz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qjW-nV-C1m"/>
+                            <constraint firstItem="WXS-Zf-Ijz" firstAttribute="top" secondItem="o2E-Bp-ZrD" secondAttribute="bottom" constant="39" id="zlh-we-uzT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jmp-8f-Zbc"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="o2E-Bp-ZrD" id="tfZ-0P-kyZ"/>
+                        <outlet property="submitButton" destination="WXS-Zf-Ijz" id="IqD-ug-Nq0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1296" y="321"/>
+        </scene>
+        <!--Leaders Table View Controller-->
+        <scene sceneID="PIp-z4-5CT">
+            <objects>
+                <viewController storyboardIdentifier="LeadersTableViewControllerID" id="Kzp-Dd-gRx" customClass="LeadersTableViewController" customModule="SolCen_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3FJ-Re-ibq"/>
+                        <viewControllerLayoutGuide type="bottom" id="ADc-Y6-Tkf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z4O-F8-m20">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GTI-AJ-ffm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Kzp-Dd-gRx" id="ngQ-ND-QcB"/>
+                                    <outlet property="delegate" destination="Kzp-Dd-gRx" id="lsY-Rt-BJ0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GTI-AJ-ffm" firstAttribute="top" secondItem="Z4O-F8-m20" secondAttribute="topMargin" id="A7R-ZD-RZ0"/>
+                            <constraint firstAttribute="trailing" secondItem="GTI-AJ-ffm" secondAttribute="trailing" id="JKs-bh-RzA"/>
+                            <constraint firstItem="ADc-Y6-Tkf" firstAttribute="top" secondItem="GTI-AJ-ffm" secondAttribute="bottom" id="K8O-H9-N71"/>
+                            <constraint firstItem="GTI-AJ-ffm" firstAttribute="leading" secondItem="Z4O-F8-m20" secondAttribute="leading" id="glF-Cl-gA1"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="tableView" destination="GTI-AJ-ffm" id="5PW-Bu-1cH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aV1-ZW-ANG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1640" y="332"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mt4-zn-eTQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iAd-NY-RBX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bZ4-pt-FNA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eFT-cz-DwA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UXP-qR-j22" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="410" y="337"/>
+        </scene>
+    </scenes>
+</document>
